@@ -99,6 +99,7 @@ export default function App() {
           { text: "Analyze these strata reports. You must extract EXACT and COMPLETE descriptions for every line item exactly as written in the reports. \n don't change the detailed levy descriptions when you present output \n\n1. RECONCILIATION: First, look at the Balance Sheet to find the control totals for 'Levies Receivable' (Arrears) and 'Levies Paid in Advance' (Credits/Advances) for both Administrative and Sinking funds.\n2. DETAILS: Then, extract individual line items from the Lot Position report or Transaction Summary that sum up to these control totals. \n- Arrears are usually debits.\n- Advances are usually credits marked with 'CR' or appearing in the 'Paid in Advance' section.\n3. LOTS: Ensure Lot numbers are captured accurately (especially T3/994).\n4. OUTPUT: Provide a flat JSON array of objects with the exact schema. For each item, identify if it is an 'Arrear' or 'Advance'. Return only the JSON array." }
         ],
         config: {
+          temperature: 0.0,
           responseMimeType: "application/json",
           responseSchema: {
             type: Type.ARRAY,
